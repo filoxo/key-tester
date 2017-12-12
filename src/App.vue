@@ -4,6 +4,9 @@
       <span>Key Tester</span>
     </header>
     <main>
+      <div>
+        <Testarea />
+      </div>
       <div class="row">
         <Key label="`" />
         <Key label="1" />
@@ -70,11 +73,13 @@
 </template>
 
 <script>
+import Testarea from './components/Testarea'
 import Key from './components/Key'
 
 export default {
   name: 'app',
   components: {
+    Testarea,
     Key
   }
 }
