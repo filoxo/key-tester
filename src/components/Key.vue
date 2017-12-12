@@ -24,7 +24,10 @@ export default {
 .key {
   border: 2px solid lightgrey;
   border-radius: 5px;
+  color: #666;
   display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
   padding: .75vmax;
   text-align: center;
   width: 2vmax;
