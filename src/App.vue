@@ -5,7 +5,39 @@
     </header>
     <main>
       <div class="row">
-        <Key label="CAPS" size="1.5"/>
+        <Key label="`" />
+        <Key label="1" />
+        <Key label="2" />
+        <Key label="3" />
+        <Key label="4" />
+        <Key label="5" />
+        <Key label="6" />
+        <Key label="7" />
+        <Key label="8" />
+        <Key label="9" />
+        <Key label="0" />
+        <Key label="-" />
+        <Key label="=" />
+        <Key label="DEL" size="1.5" />
+      </div>
+      <div class="row">
+        <Key label="TAB" size="1.5" />
+        <Key label="Q" />
+        <Key label="W" />
+        <Key label="E" />
+        <Key label="R" />
+        <Key label="T" />
+        <Key label="Y" />
+        <Key label="U" />
+        <Key label="I" />
+        <Key label="O" />
+        <Key label="P" />
+        <Key label="[" />
+        <Key label="]" />
+        <Key label="\" />
+      </div>
+      <div class="row">
+        <Key label="CAPS" size="2.25" />
         <Key label="A" />
         <Key label="S" />
         <Key label="D" />
@@ -17,7 +49,21 @@
         <Key label="L" />
         <Key label=";" />
         <Key label="'" />
-        <Key label="ENTER" size="2.25"/>
+        <Key label="ENTER" size="2.25" />
+      </div>
+      <div class="row">
+        <Key label="SHIFT" size="3.25" />
+        <Key label="Z" />
+        <Key label="X" />
+        <Key label="C" />
+        <Key label="V" />
+        <Key label="B" />
+        <Key label="N" />
+        <Key label="M" />
+        <Key label="," />
+        <Key label="." />
+        <Key label="/" />
+        <Key label="SHIFT" size="3.25" />
       </div>
     </main>
   </div>
