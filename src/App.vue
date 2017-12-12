@@ -94,7 +94,8 @@ body {
 }
 
 main {
-  margin-top: 40px;
+  margin: 20px auto;
+  width: 58vw;
 }
 
 header {
@@ -114,5 +115,10 @@ header span {
   font-weight: 400;
   box-sizing: border-box;
   padding-top: 16px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
 }
 </style>
