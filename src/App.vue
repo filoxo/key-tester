@@ -1,16 +1,36 @@
 <template>
   <div id="app">
     <header>
+      <span>Key Tester</span>
     </header>
     <main>
+      <div class="row">
+        <Key label="CAPS" size="1.5"/>
+        <Key label="A" />
+        <Key label="S" />
+        <Key label="D" />
+        <Key label="F" />
+        <Key label="G" />
+        <Key label="H" />
+        <Key label="J" />
+        <Key label="K" />
+        <Key label="L" />
+        <Key label=";" />
+        <Key label="'" />
+        <Key label="ENTER" size="2.25"/>
+      </div>
     </main>
   </div>
 </template>
 
 <script>
+import Key from './components/Key'
+
 export default {
   name: 'app',
-  components: {}
+  components: {
+    Key
+  }
 }
 </script>
 
