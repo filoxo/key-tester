@@ -9,13 +9,13 @@
         <button type="button" @click="$store.commit('reset')" >Reset</button>
       </div>
       <div>
-        <div class="row" v-for="(row, index) in map.rows" :key=index >
+        <div class="row" v-for="(row, index) in map.rows" :key="index" >
           <Key
             v-for="key in row"
-            :key=key.code
-            :label=key.label
-            :size=key.size
-            :is-active=getDetectedKey(key.code) />
+            :key="key.code"
+            :label="key.label"
+            :size="key.size"
+            :is-active="getDetectedKey(key.code)" />
         </div>
       </div>
     </main>
