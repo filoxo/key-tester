@@ -4,7 +4,7 @@
       <span>Key Tester</span>
     </header>
     <main>
-      <div>
+      <div class="action">
         <Testarea />
         <button type="button" @click="$store.commit('reset')" >Reset</button>
       </div>
@@ -70,6 +70,11 @@ header span {
   font-weight: 400;
   box-sizing: border-box;
   padding-top: 16px;
+}
+.action {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
 .row {
   display: flex;

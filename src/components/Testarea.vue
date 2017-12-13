@@ -21,5 +21,6 @@ export default {
 .testarea {
   border: 2px solid lightgrey;
   border-radius: 5px;
+  margin-right: 5px;
 }
 </style>
