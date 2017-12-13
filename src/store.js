@@ -6,11 +6,20 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     detectedKeys: {
-      20: false, // CAPS
-      65: false, // A
-      83: false, // S
-      68: false, // D
-      70: false // F
+      'CapsLock': false, //
+      'KeyA': false,
+      'KeyS': false,
+      'KeyD': false,
+      'KeyF': false,
+      'KeyG': false,
+      'KeyH': false,
+      'KeyI': false,
+      'KeyJ': false,
+      'KeyK': false,
+      'KeyL': false,
+      'Semicolon': false,
+      'Quote': false,
+      'Enter': false
     }
   },
   mutations: {
