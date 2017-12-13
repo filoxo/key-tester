@@ -58,7 +58,7 @@
       {"code": "Comma", "label": ","},
       {"code": "Period", "label": "."},
       {"code": "Slash", "label": "/"},
-      {"code": "ShiftLeft", "label": "SHIFT", "size": "3"}
+      {"code": "ShiftRight", "label": "SHIFT", "size": "3"}
     ],
     [
       {"code": "ControlLeft", "label": "CTRL"},
