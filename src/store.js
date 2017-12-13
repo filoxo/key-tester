@@ -20,6 +20,11 @@ const store = new Vuex.Store({
   mutations: {
     setActive (state, keyCode) {
       state.detectedKeys[keyCode] = true
+    },
+    reset (state) {
+      for (let keyCode in state.detectedKeys) {
+        state.detectedKeys[keyCode] = false
+      }
     }
   },
   getters: {
