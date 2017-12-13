@@ -1,12 +1,12 @@
 <template>
   <span class="key" v-bind:class="{
     active: isActive,
-    'u1-5': size === '1.5',
+    'u1-5':  size === '1.5',
     'u1-75': size === '1.75',
-    'u2': size === '2',
+    'u2':    size === '2',
     'u2-25': size === '2.25',
     'u2-75': size === '2.75',
-    'u3': size === '3',
+    'u3':    size === '3',
     'u3-25': size === '3.25'
   }">
     {{ label }}
