@@ -7,11 +7,11 @@ export default {
   name: 'testarea',
   methods: {
     detectKey (e) {
-      console.log(e.which)
-      if (e.which === 9) {
+      console.log(e.code)
+      if (e.code === 'Tab') {
         e.preventDefault()
       }
-      this.$store.commit('setActive', e.which)
+      this.$store.commit('setActive', e.code)
     }
   }
 }
