@@ -25,6 +25,20 @@ const store = new Vuex.Store({
       for (let keyCode in state.detectedKeys) {
         state.detectedKeys[keyCode] = false
       }
+    },
+    loadMap (state, map) {
+      // TODO: Validation
+      const hasRows = map.rows && map.rows.length > 0
+      if (hasRows) {
+        state.map = map
+        const detectedKeys = {}
+        map.rows.forEach(row => {
+          row.forEach(keyDef => {
+            detectedKeys[keyDef.code] = false
+          })
+        })
+        state.detectedKeys = detectedKeys
+      }
     }
   },
   getters: {
