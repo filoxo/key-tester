@@ -7,7 +7,8 @@
     'u2-25': size === '2.25',
     'u2-75': size === '2.75',
     'u3':    size === '3',
-    'u3-25': size === '3.25'
+    'u3-25': size === '3.25',
+    'u5':    size === '5'
   }">
     {{ label }}
   </span>
@@ -41,4 +42,5 @@ export default {
 .u2-75 { width: 5.5vmax; }
 .u3 { width: 6vmax; }
 .u3-25 { width: 6.5vmax; }
+.u5 { width: 20vmax; }
 </style>
