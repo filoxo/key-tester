@@ -4,7 +4,7 @@ import map from './keymaps/apple'
 
 Vue.use(Vuex)
 
-let detectedKeys = []
+const detectedKeys = {}
 
 map.rows.forEach(row => {
   row.forEach(keyDef => {
@@ -14,7 +14,7 @@ map.rows.forEach(row => {
 
 const store = new Vuex.Store({
   state: {
-    detectedKeys: {...detectedKeys},
+    detectedKeys,
     map
   },
   mutations: {
