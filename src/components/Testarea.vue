@@ -6,11 +6,12 @@
 export default {
   name: 'testarea',
   methods: {
-    detectKey: e => {
+    detectKey (e) {
       console.log(e.which)
       if (e.which === 9) {
         e.preventDefault()
       }
+      this.$store.commit('setActive', e.which)
     }
   }
 }
