@@ -6,6 +6,7 @@
     <main>
       <div>
         <Testarea />
+        <button type="button" @click="$store.commit('reset')" >Reset</button>
       </div>
       <div>
         <div class="row" v-for="(row, index) in map.rows" :key=index >
@@ -74,5 +75,13 @@ header span {
   display: flex;
   justify-content: space-between;
   margin: 5px 0;
+}
+button {
+  background: steelblue;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
 }
 </style>
