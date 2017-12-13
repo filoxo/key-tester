@@ -30,6 +30,7 @@ export default {
   font-weight: bold;
   padding: .75vmax;
   text-align: center;
+  transition: border-color .2s ease-in;
   width: 2vmax;
 }
 .active { border-color: steelblue; }
