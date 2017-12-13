@@ -40,19 +40,19 @@
         <Key label="\" />
       </div>
       <div class="row">
-        <Key label="CAPS" size="2.25" />
-        <Key label="A" />
-        <Key label="S" />
-        <Key label="D" />
-        <Key label="F" />
-        <Key label="G" />
-        <Key label="H" />
-        <Key label="J" />
-        <Key label="K" />
-        <Key label="L" />
-        <Key label=";" />
-        <Key label="'" />
-        <Key label="ENTER" size="2.25" />
+        <Key label="CAPS" :is-active=this.detectedKeys.CapsLock size="2.25" />
+        <Key label="A" :is-active=this.detectedKeys.KeyA />
+        <Key label="S" :is-active=this.detectedKeys.KeyS />
+        <Key label="D" :is-active=this.detectedKeys.KeyD />
+        <Key label="F" :is-active=this.detectedKeys.KeyF />
+        <Key label="G" :is-active=this.detectedKeys.KeyG />
+        <Key label="H" :is-active=this.detectedKeys.KeyH />
+        <Key label="J" :is-active=this.detectedKeys.KeyJ />
+        <Key label="K" :is-active=this.detectedKeys.KeyK />
+        <Key label="L" :is-active=this.detectedKeys.KeyL />
+        <Key label=";" :is-active=this.detectedKeys.Semicolon />
+        <Key label="'" :is-active=this.detectedKeys.Quote />
+        <Key label="ENTER" :is-active=this.detectedKeys.Enter size="2.25" />
       </div>
       <div class="row">
         <Key label="SHIFT" size="3.25" />
@@ -75,12 +75,17 @@
 <script>
 import Testarea from './components/Testarea'
 import Key from './components/Key'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   name: 'app',
   components: {
     Testarea,
     Key
+  },
+  computed: {
+    ...mapState(['detectedKeys']),
+    ...mapGetters(['getDetectedKey'])
   }
 }
 </script>
