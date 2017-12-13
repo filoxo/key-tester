@@ -32,7 +32,7 @@ export default {
   text-align: center;
   width: 2vmax;
 }
-.active { border-color: lightgreen; }
+.active { border-color: steelblue; }
 .u1-5 { width: 3vmax; }
 .u1-75 { width: 3.5vmax; }
 .u2 { width: 4vmax; }
