@@ -68,6 +68,16 @@
         <Key label="/" />
         <Key label="SHIFT" size="3.25" />
       </div>
+      <div style="margin-top: 50px;">
+        <div class="row" v-for="(row, index) in map.rows" :key=index>
+          <Key
+            v-for="key in row"
+            :key=key.code
+            :label=key.label
+            :size=key.size
+            :is-active=getDetectedKey(key.code) />
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -84,7 +94,7 @@ export default {
     Key
   },
   computed: {
-    ...mapState(['detectedKeys']),
+    ...mapState(['detectedKeys', 'map']),
     ...mapGetters(['getDetectedKey'])
   }
 }
