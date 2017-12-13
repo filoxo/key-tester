@@ -15,7 +15,7 @@
             :key="key.code"
             :label="key.label"
             :size="key.size"
-            :is-active="getDetectedKey(key.code)" />
+            :is-active="detectedKeys[key.code]" />
         </div>
       </div>
     </main>
@@ -25,7 +25,7 @@
 <script>
 import Testarea from './components/Testarea'
 import Key from './components/Key'
-import { mapState, mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: 'app',
@@ -34,8 +34,7 @@ export default {
     Key
   },
   computed: {
-    ...mapState(['detectedKeys', 'map']),
-    ...mapGetters(['getDetectedKey'])
+    ...mapState(['detectedKeys', 'map'])
   }
 }
 </script>
