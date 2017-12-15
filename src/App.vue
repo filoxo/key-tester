@@ -8,7 +8,8 @@
         <Testarea />
         <button type="button" @click="$store.commit('reset')" >Reset</button>
       </div>
-      <div>
+      <div class="container">
+        <div class="keyboard">
         <div class="row" v-for="(row, index) in map.rows" :key="index" >
           <Key
             v-for="key in row"
@@ -16,6 +17,7 @@
             :label="key.label"
             :size="key.size"
             :is-active="detectedKeys[key.code]" />
+        </div>
         </div>
       </div>
     </main>
@@ -49,7 +51,8 @@ body {
 
 main {
   margin: 20px auto;
-  width: 58vw;
+  max-width: 700px;
+  width: 100%;
 }
 
 header {
@@ -74,6 +77,15 @@ header span {
   display: flex;
   align-items: stretch;
   justify-content: center;
+}
+.container {
+  margin-top: 15px;
+  overflow: scroll;
+  width: 100%;
+}
+.keyboard {
+  min-width: 500px;
+  padding: 0 10px;
 }
 .row {
   display: flex;
