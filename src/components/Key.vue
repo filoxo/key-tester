@@ -1,15 +1,19 @@
 <template>
-  <span class="key" v-bind:class="{
-    active: isActive,
-    'u1-5':  size === '1.5',
-    'u1-75': size === '1.75',
-    'u2':    size === '2',
-    'u2-25': size === '2.25',
-    'u2-75': size === '2.75',
-    'u3':    size === '3',
-    'u3-25': size === '3.25',
-    'u5':    size === '5'
-  }">
+  <span
+    class="key"
+    :class="{
+      active: isActive,
+      'u-5':   size === '.5',
+      'u1-5':  size === '1.5',
+      'u1-75': size === '1.75',
+      'u2':    size === '2',
+      'u2-25': size === '2.25',
+      'u2-75': size === '2.75',
+      'u3':    size === '3',
+      'u3-25': size === '3.25',
+      'u5':    size === '5'
+    }"
+  >
     {{ label }}
   </span>
 </template>
@@ -29,18 +33,19 @@ export default {
   display: inline-block;
   font-size: 12px;
   font-weight: bold;
-  padding: .75vmax;
+  padding: .5rem;
   text-align: center;
   transition: border-color .2s ease-in;
-  width: 2vmax;
+  width: 1.5rem;
 }
 .active { border-color: steelblue; }
-.u1-5 { width: 3vmax; }
-.u1-75 { width: 3.5vmax; }
-.u2 { width: 4vmax; }
-.u2-25 { width: 4.5vmax; }
-.u2-75 { width: 5.5vmax; }
-.u3 { width: 6vmax; }
-.u3-25 { width: 6.5vmax; }
-.u5 { width: 20vmax; }
+.u-5 { width: .75rem; }
+.u1-5 { width: 2.25rem; }
+.u1-75 { width: 2.625rem; }
+.u2 { width: 3rem; }
+.u2-25 { width: 3.375rem; }
+.u2-75 { width: 4.125rem; }
+.u3 { width: 4.5rem; }
+.u3-25 { width: 4.875rem; }
+.u5 { width: 7.5rem; }
 </style>
