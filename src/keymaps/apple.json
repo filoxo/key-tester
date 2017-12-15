@@ -1,6 +1,21 @@
 {
   "rows": [
     [
+      {"code": "Escape", "label": "ESC"},
+      {"code": "F1", "label": "F1"},
+      {"code": "F2", "label": "F2"},
+      {"code": "F3", "label": "F3"},
+      {"code": "F4", "label": "F4"},
+      {"code": "F5", "label": "F5"},
+      {"code": "F6", "label": "F6"},
+      {"code": "F7", "label": "F7"},
+      {"code": "F8", "label": "F8"},
+      {"code": "F9", "label": "F9"},
+      {"code": "F10", "label": "F10"},
+      {"code": "F11", "label": "F11"},
+      {"code": "F12", "label": "F12"}
+    ],
+    [
       {"code": "Backquote", "label": "`"},
       {"code": "Digit1", "label": "1"},
       {"code": "Digit2", "label": "2"},
@@ -66,7 +81,11 @@
       {"code": "MetaLeft", "label": "⌘", "size": "1.5"},
       {"code": "Space", "label": "SPACE", "size": "5"},
       {"code": "MetaRight", "label": "⌘", "size": "1.5"},
-      {"code": "AltRight", "label": "ALT"}
+      {"code": "AltRight", "label": "ALT"},
+      {"code": "ArrowLeft", "label": "◀︎", "size": ".5"},
+      {"code": "ArrowUp", "label": "▲", "size": ".5"},
+      {"code": "ArrowDown", "label": "▼", "size": ".5"},
+      {"code": "ArrowRight", "label": "▶︎", "size": ".5"}
     ]
   ]
 }
