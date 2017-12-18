@@ -41,6 +41,7 @@
       {"code": "KeyY", "label": "Y"},
       {"code": "KeyU", "label": "U"},
       {"code": "KeyI", "label": "I"},
+      {"code": "KeyO", "label": "O"},
       {"code": "KeyP", "label": "P"},
       {"code": "BracketLeft", "label": "["},
       {"code": "BracketRight", "label": "]"},
