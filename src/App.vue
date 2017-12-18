@@ -6,18 +6,25 @@
     <main>
       <div class="action">
         <Testarea />
-        <button type="button" @click="$store.commit('reset')" >Reset</button>
+        <button
+          type="button"
+          @click="$store.commit('reset')" >
+          Reset
+        </button>
       </div>
       <div class="container">
         <div class="keyboard">
-        <div class="row" v-for="(row, index) in map.rows" :key="index" >
-          <Key
-            v-for="key in row"
-            :key="key.code"
-            :label="key.label"
-            :size="key.size"
-            :is-active="detectedKeys[key.code]" />
-        </div>
+          <div
+            class="row"
+            v-for="(row, index) in map.rows"
+            :key="index" >
+            <Key
+              v-for="key in row"
+              :key="key.code"
+              :label="key.label"
+              :size="key.size"
+              :is-active="detectedKeys[key.code]" />
+          </div>
         </div>
       </div>
     </main>
