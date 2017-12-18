@@ -11,6 +11,16 @@
           @click="$store.commit('reset')" >
           Reset
         </button>
+        <div class="select">
+          <select
+            name="keymapSelector"
+            id="keymapSelector">
+            <option value="apple">Standard (Mac)</option>
+            <option value="windows">Standard (Windows)</option>
+            <option value="orthodox">Orthodox</option>
+            <option value="gherkin">Gherkin</option>
+          </select>
+        </div>
       </div>
       <div class="container">
         <div class="keyboard">
@@ -82,8 +92,11 @@ header span {
 }
 .action {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
+}
+.action > *:not(:last-child) {
+  margin-right: 5px;
 }
 .container {
   margin-top: 15px;
@@ -102,6 +115,7 @@ header span {
 button {
   background: steelblue;
   border: none;
+  border-radius: 5px;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
