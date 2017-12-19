@@ -14,7 +14,8 @@
         <div class="select">
           <select
             name="keymapSelector"
-            id="keymapSelector">
+            id="keymapSelector"
+            @change="changeMap" >
             <option value="apple">Standard (Mac)</option>
             <option value="windows">Standard (Windows)</option>
             <option value="orthodox">Orthodox</option>
@@ -54,6 +55,11 @@ export default {
   },
   computed: {
     ...mapState(['detectedKeys', 'map'])
+  },
+  methods: {
+    changeMap (e) {
+      this.$store.commit('loadMap', e.target.value)
+    }
   }
 }
 </script>
