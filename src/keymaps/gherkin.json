@@ -1,0 +1,40 @@
+{
+  "rows": [
+    [
+      {"code": "KeyQ", "label": "Q"},
+      {"code": "KeyW", "label": "W"},
+      {"code": "KeyE", "label": "E"},
+      {"code": "KeyR", "label": "R"},
+      {"code": "KeyT", "label": "T"},
+      {"code": "KeyY", "label": "Y"},
+      {"code": "KeyU", "label": "U"},
+      {"code": "KeyI", "label": "I"},
+      {"code": "KeyO", "label": "O"},
+      {"code": "KeyP", "label": "P"}
+    ],
+    [
+      {"code": "KeyA", "label": "A"},
+      {"code": "KeyS", "label": "S"},
+      {"code": "KeyD", "label": "D"},
+      {"code": "KeyF", "label": "F"},
+      {"code": "KeyG", "label": "G"},
+      {"code": "KeyH", "label": "H"},
+      {"code": "KeyJ", "label": "J"},
+      {"code": "KeyK", "label": "K"},
+      {"code": "KeyL", "label": "L"},
+      {"code": "Escape", "label": "ESC"}
+    ],
+    [
+      {"code": "KeyZ", "label": "Z"},
+      {"code": "KeyX", "label": "X"},
+      {"code": "KeyC", "label": "C"},
+      {"code": "KeyV", "label": "V"},
+      {"code": "Backspace", "label": "DEL"},
+      {"code": "Space", "label": "SPC"},
+      {"code": "KeyB", "label": "B"},
+      {"code": "KeyN", "label": "N"},
+      {"code": "KeyM", "label": "M"},
+      {"code": "Enter", "label": "ENT"}
+    ]
+  ]
+}
