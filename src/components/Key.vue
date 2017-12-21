@@ -11,7 +11,8 @@
       'u2-75': size === '2.75',
       'u3':    size === '3',
       'u3-25': size === '3.25',
-      'u5':    size === '5'
+      'u5':    size === '5',
+      pressed: isPressed
     }"
   >
     {{ label }}
@@ -21,7 +22,7 @@
 <script>
 export default {
   name: 'key',
-  props: ['label', 'size', 'isActive']
+  props: ['label', 'size', 'isActive', 'isPressed']
 }
 </script>
 
@@ -35,7 +36,7 @@ export default {
   font-weight: bold;
   padding: .5rem;
   text-align: center;
-  transition: border-color .2s ease-in;
+  transition: border-color .2s ease-in, transform .1s ease-in-out;
   width: 1.5rem;
 }
 .active { border-color: steelblue; }
@@ -48,4 +49,5 @@ export default {
 .u3 { width: 4.5rem; }
 .u3-25 { width: 4.875rem; }
 .u5 { width: 7.5rem; }
+.pressed { transform: translateY(3px); }
 </style>
