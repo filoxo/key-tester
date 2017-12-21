@@ -27,7 +27,6 @@ export default {
       this.$store.commit('pressKey', e.code)
     },
     releaseKey (e) {
-      console.log('release', e.code)
       this.$store.commit('releaseKey', e.code)
     }
   }
