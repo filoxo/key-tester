@@ -22,6 +22,9 @@
             <option value="gherkin">Gherkin</option>
           </select>
         </div>
+        <div>
+          <MapUploader />
+        </div>
       </div>
       <div class="container">
         <div class="keyboard">
@@ -46,13 +49,15 @@
 <script>
 import Testarea from './components/Testarea'
 import Key from './components/Key'
+import MapUploader from './components/MapUploader'
 import { mapState } from 'vuex'
 
 export default {
   name: 'app',
   components: {
     Testarea,
-    Key
+    Key,
+    MapUploader
   },
   computed: {
     ...mapState(['detectedKeys', 'map', 'pressedKeys'])
