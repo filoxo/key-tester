@@ -59,6 +59,7 @@ export default {
   },
   methods: {
     changeMap (e) {
+      this.$store.commit('reset')
       this.$store.dispatch('loadMap', e.target.value)
     }
   }
