@@ -7,7 +7,8 @@
     rows="3"
     placeholder="Begin typing..."
     ref="testarea"
-    @keydown="detectKey" />
+    @keydown="detectKey"
+    @keyup="releaseKey" />
 </template>
 
 <script>
@@ -23,6 +24,11 @@ export default {
         e.preventDefault()
       }
       this.$store.commit('setActive', e.code)
+      this.$store.commit('pressKey', e.code)
+    },
+    releaseKey (e) {
+      console.log('release', e.code)
+      this.$store.commit('releaseKey', e.code)
     }
   }
 }
