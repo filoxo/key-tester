@@ -15,11 +15,18 @@ map.rows.forEach(row => {
 const store = new Vuex.Store({
   state: {
     detectedKeys,
-    map
+    map,
+    pressedKeys: {}
   },
   mutations: {
     setActive (state, keyCode) {
-      state.detectedKeys[keyCode] = true
+      state.detectedKeys = {...state.detectedKeys, [keyCode]: true}
+    },
+    pressKey (state, keyCode) {
+      state.pressedKeys = {...state.pressedKeys, [keyCode]: true}
+    },
+    releaseKey (state, keyCode) {
+      state.pressedKeys = {...state.pressedKeys, [keyCode]: false}
     },
     reset (state) {
       for (let keyCode in state.detectedKeys) {
