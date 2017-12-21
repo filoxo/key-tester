@@ -34,7 +34,8 @@
               :key="key.code"
               :label="key.label"
               :size="key.size"
-              :is-active="detectedKeys[key.code]" />
+              :is-active="detectedKeys[key.code]"
+              :is-pressed="pressedKeys[key.code]" />
           </div>
         </div>
       </div>
@@ -54,7 +55,7 @@ export default {
     Key
   },
   computed: {
-    ...mapState(['detectedKeys', 'map'])
+    ...mapState(['detectedKeys', 'map', 'pressedKeys'])
   },
   methods: {
     changeMap (e) {
