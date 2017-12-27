@@ -36,5 +36,6 @@
       {"code": "KeyM", "label": "M"},
       {"code": "Enter", "label": "ENT"}
     ]
-  ]
+  ],
+  "style":  ".keyboard .row { justify-content: flex-start; }"
 }
