@@ -37,6 +37,7 @@
             <Key
               v-for="key in row"
               :key="key.code"
+              :keyCode="key.code"
               :label="key.label"
               :size="key.size"
               :is-active="detectedKeys[key.code]"

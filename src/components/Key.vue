@@ -2,6 +2,7 @@
   <span
     class="key"
     :class="{
+      [keyCode]: true,
       active: isActive,
       'u-5':   size === '.5',
       'u1-5':  size === '1.5',
@@ -22,11 +23,11 @@
 <script>
 export default {
   name: 'key',
-  props: ['label', 'size', 'isActive', 'isPressed']
+  props: ['keyCode', 'label', 'size', 'isActive', 'isPressed']
 }
 </script>
 
-<style scoped>
+<style>
 .key {
   border: 2px solid lightgrey;
   border-radius: 5px;
