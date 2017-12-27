@@ -1,27 +1,35 @@
 <template>
-  <span style="display: none;"></span>
+  <span style="display: none;" :data-styles="styles"></span>
 </template>
 
 <script>
 export default {
   name: 'stylesheet',
-  styleSheet: null,
+  styleEl: null,
   mounted () {
-    const style = document.createElement('style')
-    style.appendChild(document.createTextNode(''))
-    document.head.appendChild(style)
-    this.styleSheet = style.sheet
     this.addStyleSheet(this.$store.state.styles)
   },
   computed: {
     styles () {
-      const { styles } = this.$store.state
-      if (this.styleSheet) this.addStyleSheet(styles)
+      this.addStyleSheet(this.$store.state.styles)
     }
   },
   methods: {
     addStyleSheet (styles) {
-      if (styles !== '') this.styleSheet.insertRule(styles)
+      if (this.styleEl) {
+        const { parentNode } = this.styleEl
+        parentNode.removeChild(this.styleEl)
+        this.styleEl = null
+      }
+      if (styles !== '') {
+        const s = document.createElement('style')
+        s.type = 'text/css'
+        s.appendChild(document.createTextNode(''))
+        s.id = 'ktStyleSheet'
+        s.innerHTML = styles
+        document.head.appendChild(s)
+        this.styleEl = s
+      }
     }
   }
 }
