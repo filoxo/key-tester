@@ -12,7 +12,7 @@
       {"code": "KeyI", "label": "I"},
       {"code": "KeyO", "label": "O"},
       {"code": "KeyP", "label": "P"},
-      {"code": "Backspace", "label": "Del"}
+      {"code": "Backspace", "label": "DEL"}
     ],
     [
       {"code": "Tab", "label": "Tab"},
