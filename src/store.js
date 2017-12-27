@@ -32,6 +32,9 @@ const store = new Vuex.Store({
       for (let keyCode in state.detectedKeys) {
         state.detectedKeys[keyCode] = false
       }
+      for (let keyCode in state.pressedKeys) {
+        state.pressedKeys[keyCode] = false
+      }
     },
     setMap (state, map) {
       const hasRows = map.rows && map.rows.length > 0
