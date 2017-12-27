@@ -6,7 +6,13 @@
       {"code": "KeyW", "label": "W"},
       {"code": "KeyE", "label": "E"},
       {"code": "KeyR", "label": "R"},
-      {"code": "KeyT", "label": "T"}
+      {"code": "KeyT", "label": "T"},
+      {"code": "KeyY", "label": "Y"},
+      {"code": "KeyU", "label": "U"},
+      {"code": "KeyI", "label": "I"},
+      {"code": "KeyO", "label": "O"},
+      {"code": "KeyP", "label": "P"},
+      {"code": "Backspace", "label": "Del"}
     ],
     [
       {"code": "Tab", "label": "Tab"},
@@ -15,8 +21,16 @@
       {"code": "KeyD", "label": "D"},
       {"code": "KeyF", "label": "F"},
       {"code": "KeyG", "label": "G"},
-      {"code": "Backspace", "label": "Del"},
-      {"code": "ArrowLeft", "label": "←"}
+      {"code": "Backspace", "label": "DEL"},
+      {"code": "ArrowLeft", "label": "←"},
+      {"code": "ArrowRight", "label": "→"},
+      {"code": "Space", "label": "SPC"},
+      {"code": "KeyH", "label": "H"},
+      {"code": "KeyJ", "label": "J"},
+      {"code": "KeyK", "label": "K"},
+      {"code": "KeyL", "label": "L"},
+      {"code": "Semicolon", "label": ";"},
+      {"code": "Quote", "label": "'"}
     ],
     [
       {"code": "MetaLeft", "label": "⌘"},
@@ -26,8 +40,16 @@
       {"code": "KeyV", "label": "V"},
       {"code": "KeyB", "label": "B"},
       {"code": "MetaLeft", "label": "⌘"},
-      {"code": "ArrowDown", "label": "↓"}
+      {"code": "ArrowDown", "label": "↓"},
+      {"code": "ArrowUp", "label": "↑"},
+      {"code": "Enter", "label": "ENT"},
+      {"code": "KeyN", "label": "N"},
+      {"code": "KeyM", "label": "M"},
+      {"code": "Comma", "label": ","},
+      {"code": "Period", "label": "."},
+      {"code": "Slash", "label": "/"},
+      {"code": "Enter", "label": "ENT"}
     ]
   ],
-  "style": ".container { overflow: visible } \n.keyboard .row { justify-content: flex-start; }\n.Backspace { transform: translateY(5rem) rotateZ(-30deg); }\n.MetaLeft:nth-of-type(7) { transform: translate3d(1.2rem, 4.5rem, 0) rotateZ(-30deg); } \n.ArrowDown { transform: translate3d(1rem, 3rem, 0) rotateZ(-30deg); } \n.ArrowLeft { transform: translate3d(-0.2rem, 3.5rem, 0) rotateZ(-30deg); }"
+  "style": ".container { overflow: visible } \n.keyboard .row { justify-content: flex-start; }\n.KeyG + .Backspace { transform: translate3d(-1.4rem, 6.5rem, 0) rotateZ(-50deg); }\n.KeyB + .MetaLeft { transform: translate3d(0.4rem, 5.5rem, 0) rotateZ(-50deg); } \n.ArrowDown { transform: translate3d(-0.4rem, 3.2rem, 0) rotateZ(-50deg); } \n.ArrowLeft { transform: translate3d(-2.2rem, 4.2rem, 0) rotateZ(-50deg); }\n .KeyY { margin-left: 11rem; }\n.ArrowRight {   transform: translate3d(2.2rem, 4.2rem, 0) rotateZ(50deg); }\n.ArrowUp { transform: translate3d(0.4rem, 3.2rem, 0) rotateZ(50deg); }\n.Space { transform: translate3d(1.4rem, 6.5rem, 0) rotateZ(50deg); }\n.ArrowUp + .Enter { transform: translate3d(-0.4rem, 5.5rem, 0) rotateZ(50deg); }"
 }
