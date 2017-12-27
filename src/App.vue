@@ -4,29 +4,31 @@
       <span>Key Tester</span>
     </header>
     <main>
-      <div class="action">
-        <Testarea />
-        <button
-          type="button"
-          @click="$store.commit('reset')" >
-          Reset
-        </button>
-        <div class="select">
-          <select
-            name="keymapSelector"
-            id="keymapSelector"
-            @change="changeMap" >
-            <option value="apple">Standard (Mac)</option>
-            <option value="windows">Standard (Windows)</option>
-            <option value="orthodox">Orthodox</option>
-            <option value="gherkin">Gherkin</option>
-          </select>
-        </div>
-        <div>
+      <div class="container">
+        <div class="action">
+          <div class="action-left">
+            <Testarea />
+            <button
+              type="button"
+              @click="$store.commit('reset')" >
+              Reset
+            </button>
+          </div>
+          <div>
+            <div class="select">
+              <select
+                name="keymapSelector"
+                id="keymapSelector"
+                @change="changeMap" >
+                <option value="apple">Standard (Mac)</option>
+                <option value="windows">Standard (Windows)</option>
+                <option value="orthodox">Orthodox</option>
+                <option value="gherkin">Gherkin</option>
+              </select>
+            </div>
           <MapUploader />
         </div>
       </div>
-      <div class="container">
         <div class="keyboard">
           <div
             class="row"
@@ -106,10 +108,12 @@ header span {
 .action {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 10px;
 }
-.action > *:not(:last-child) {
-  margin-right: 5px;
+.action-left {
+  display: flex;
+  align-items: center;
 }
 .container {
   margin-top: 15px;
