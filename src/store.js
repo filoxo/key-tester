@@ -50,6 +50,7 @@ const store = new Vuex.Store({
           })
         })
       }
+      state.styles = map.style || ''
     },
     updateTestText (state, text) {
       state.testText = text
