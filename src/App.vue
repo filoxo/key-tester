@@ -45,6 +45,7 @@
         </div>
       </div>
     </main>
+    <StyleSheet />
   </div>
 </template>
 
@@ -52,6 +53,7 @@
 import Testarea from './components/Testarea'
 import Key from './components/Key'
 import MapUploader from './components/MapUploader'
+import StyleSheet from './components/StyleSheet'
 import { mapState } from 'vuex'
 
 export default {
@@ -59,7 +61,8 @@ export default {
   components: {
     Testarea,
     Key,
-    MapUploader
+    MapUploader,
+    StyleSheet
   },
   computed: {
     ...mapState(['detectedKeys', 'map', 'pressedKeys'])
