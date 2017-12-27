@@ -1,0 +1,33 @@
+{
+  "rows": [
+    [
+      {"code": "Escape", "label": "ESC"},
+      {"code": "KeyQ", "label": "Q"},
+      {"code": "KeyW", "label": "W"},
+      {"code": "KeyE", "label": "E"},
+      {"code": "KeyR", "label": "R"},
+      {"code": "KeyT", "label": "T"}
+    ],
+    [
+      {"code": "Tab", "label": "Tab"},
+      {"code": "KeyA", "label": "A"},
+      {"code": "KeyS", "label": "S"},
+      {"code": "KeyD", "label": "D"},
+      {"code": "KeyF", "label": "F"},
+      {"code": "KeyG", "label": "G"},
+      {"code": "Backspace", "label": "Del"},
+      {"code": "ArrowLeft", "label": "←"}
+    ],
+    [
+      {"code": "MetaLeft", "label": "⌘"},
+      {"code": "KeyZ", "label": "Z"},
+      {"code": "KeyX", "label": "X"},
+      {"code": "KeyC", "label": "C"},
+      {"code": "KeyV", "label": "V"},
+      {"code": "KeyB", "label": "B"},
+      {"code": "MetaLeft", "label": "⌘"},
+      {"code": "ArrowDown", "label": "↓"}
+    ]
+  ],
+  "style": ".container { overflow: visible } \n.keyboard .row { justify-content: flex-start; }\n.Backspace { transform: translateY(5rem) rotateZ(-30deg); }\n.MetaLeft:nth-of-type(7) { transform: translate3d(1.2rem, 4.5rem, 0) rotateZ(-30deg); } \n.ArrowDown { transform: translate3d(1rem, 3rem, 0) rotateZ(-30deg); } \n.ArrowLeft { transform: translate3d(-0.2rem, 3.5rem, 0) rotateZ(-30deg); }"
+}
