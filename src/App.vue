@@ -26,9 +26,11 @@
                 <option value="gherkin">Gherkin</option>
               </select>
             </div>
-          <MapUploader />
+            <MapUploader />
+          </div>
         </div>
       </div>
+      <div class="container">
         <div class="keyboard">
           <div
             class="row"
@@ -121,10 +123,11 @@ header span {
 }
 .container {
   margin-top: 15px;
-  overflow: scroll;
+  overflow-x: scroll;
   width: 100%;
 }
 .keyboard {
+  min-height: 50vh;
   min-width: 500px;
   padding: 0 10px;
 }
