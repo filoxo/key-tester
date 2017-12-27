@@ -16,7 +16,8 @@ const store = new Vuex.Store({
   state: {
     detectedKeys,
     map,
-    pressedKeys: {}
+    pressedKeys: {},
+    testText: ''
   },
   mutations: {
     setActive (state, keyCode) {
@@ -35,6 +36,7 @@ const store = new Vuex.Store({
       for (let keyCode in state.pressedKeys) {
         state.pressedKeys[keyCode] = false
       }
+      state.testText = ''
     },
     setMap (state, map) {
       const hasRows = map.rows && map.rows.length > 0
@@ -47,6 +49,9 @@ const store = new Vuex.Store({
           })
         })
       }
+    },
+    updateTestText (state, text) {
+      state.testText = text
     }
   },
   actions: {

@@ -7,6 +7,8 @@
     rows="3"
     placeholder="Begin typing..."
     ref="testarea"
+    :value="testText"
+    @input="updateTestText"
     @keydown="detectKey"
     @keyup="releaseKey" />
 </template>
@@ -28,6 +30,18 @@ export default {
     },
     releaseKey (e) {
       this.$store.commit('releaseKey', e.code)
+    },
+    updateTestText (e) {
+      this.$store.commit('updateTestText', e.target.value)
+    }
+  },
+  computed: {
+    testText () {
+      const { testText } = this.$store.state
+      if (this.$refs.testarea !== undefined && testText === '') {
+        this.$refs.testarea.focus()
+      }
+      return testText
     }
   }
 }
