@@ -93,12 +93,13 @@ main {
 
 header {
   margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
+  padding: 16px;
   background-color: steelblue;
   color: #fff;
 }
-
+@media screen and (max-width: 750px) {
+  header { display: none; }
+}
 header span {
   display: block;
   position: relative;
@@ -107,7 +108,6 @@ header span {
   letter-spacing: .02em;
   font-weight: 400;
   box-sizing: border-box;
-  padding-top: 16px;
 }
 .action {
   display: flex;
