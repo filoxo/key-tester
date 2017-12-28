@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container" style="overflow-x: scroll;">
         <div class="keyboard">
           <div
             class="row"
@@ -123,7 +123,6 @@ header span {
 }
 .container {
   margin-top: 15px;
-  overflow-x: scroll;
   width: 100%;
 }
 .keyboard {
