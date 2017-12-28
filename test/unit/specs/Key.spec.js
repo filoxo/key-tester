@@ -13,7 +13,7 @@ describe('Key component', () => {
     expect($el.classList.contains('Enter')).to.equal(true)
   })
 
-  it('should add isActive class', done => {
+  it('should add active class', done => {
     const Constructor = Vue.extend(Key)
     const propsData = {
       isActive: false
@@ -23,6 +23,20 @@ describe('Key component', () => {
     vm.isActive = true
     Vue.nextTick(() => {
       expect(vm.$el.querySelectorAll('.key.active')).not.to.equal(null)
+      done()
+    })
+  })
+
+  it('should add pressed class', done => {
+    const Constructor = Vue.extend(Key)
+    const propsData = {
+      isPressed: false
+    }
+    const vm = new Constructor({propsData}).$mount()
+    expect(vm.$el.querySelector('.key.pressed')).to.equal(null)
+    vm.isPressed = true
+    Vue.nextTick(() => {
+      expect(vm.$el.querySelectorAll('.key.pressed')).not.to.equal(null)
       done()
     })
   })
