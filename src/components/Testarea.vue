@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .testarea {
   border: 2px solid lightgrey;
   border-radius: 5px;
