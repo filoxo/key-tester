@@ -22,7 +22,7 @@
       {"code": "KeyJ", "label": "J"},
       {"code": "KeyK", "label": "K"},
       {"code": "KeyL", "label": "L"},
-      {"code": "Escape", "label": "ESC"}
+      {"code": "Enter", "label": "ENT"}
     ],
     [
       {"code": "KeyZ", "label": "Z"},
@@ -33,8 +33,7 @@
       {"code": "Space", "label": "SPC"},
       {"code": "KeyB", "label": "B"},
       {"code": "KeyN", "label": "N"},
-      {"code": "KeyM", "label": "M"},
-      {"code": "Enter", "label": "ENT"}
+      {"code": "KeyM", "label": "M"}
     ]
   ],
   "style":  ".keyboard .row { justify-content: flex-start; }"
