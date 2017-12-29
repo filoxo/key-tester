@@ -35,7 +35,7 @@ export default {
   display: flex;
   font-size: 11px;
   font-weight: bold;
-  padding: 10px;
+  justify-content: stretch;
   text-transform: uppercase;
 }
 [type=file] {
@@ -45,6 +45,9 @@ export default {
   width:1px;
   height:1px;
   overflow:hidden;
+}
+[type=file] + label {
+  padding: 10px;
 }
 [type=file]:focus + label {
   outline: 1px solid steelblue;
