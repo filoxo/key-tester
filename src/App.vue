@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <span>Key Tester</span>
+      <h1>Key Tester</h1>
     </header>
     <main>
       <div class="container">
@@ -101,17 +101,16 @@ header {
   background-color: steelblue;
   color: #fff;
 }
-@media screen and (max-width: 750px) {
-  header { display: none; }
-}
-header span {
-  display: block;
-  position: relative;
+header h1 {
   font-size: 20px;
   line-height: 1;
   letter-spacing: .02em;
   font-weight: 400;
-  box-sizing: border-box;
+  margin: 0;
+}
+@media screen and (max-width: 750px) {
+  header { padding: 10px; }
+  header h1 { font-size: 18px; }
 }
 .custom-select {
   background-color: steelblue;
