@@ -10,11 +10,12 @@
             <Testarea />
             <button
               type="button"
-              @click="$store.commit('reset')" >
+              @click="$store.commit('reset')"
+              style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;" >
               Reset
             </button>
           </div>
-          <div>
+          <div class="action-right">
             <div class="custom-select">
               <select
                 name="keymapSelector"
@@ -114,7 +115,10 @@ header span {
 }
 .custom-select {
   background-color: steelblue;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  margin-right: 1px;
 }
 .custom-select::after {
 	width: 0;
@@ -127,17 +131,19 @@ header span {
 .custom-select select {
   border: 0;
   color: #fff;
-  padding: .6em .6em .7em .6em;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 10px;
+  text-transform: uppercase;
 }
 .action {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   padding: 0 10px;
 }
-.action-left {
+.action-left, .action-right {
   display: flex;
-  align-items: center;
 }
 .container {
   margin-top: 15px;
@@ -155,7 +161,6 @@ header span {
 button {
   background: steelblue;
   border: none;
-  border-radius: 5px;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;

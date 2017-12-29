@@ -3,8 +3,8 @@
     class="testarea"
     name="testarea"
     id="testarea"
-    cols="30"
-    rows="3"
+    cols="45"
+    rows="2"
     placeholder="Begin typing..."
     ref="testarea"
     :value="testText"
@@ -49,8 +49,10 @@ export default {
 
 <style>
 .testarea {
-  border: 2px solid lightgrey;
-  border-radius: 5px;
-  margin-right: 5px;
+  border: 2px solid steelblue;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: 1px;
+  padding: .25rem;
 }
 </style>
