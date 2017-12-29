@@ -136,6 +136,10 @@ header span {
   padding: 10px;
   text-transform: uppercase;
 }
+.custom-select select:focus {
+  outline: 1px solid steelblue;
+	outline: -webkit-focus-ring-color auto 5px;
+}
 .action {
   display: flex;
   align-items: stretch;
