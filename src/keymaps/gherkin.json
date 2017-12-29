@@ -33,7 +33,8 @@
       {"code": "Space", "label": "SPC"},
       {"code": "KeyB", "label": "B"},
       {"code": "KeyN", "label": "N"},
-      {"code": "KeyM", "label": "M"}
+      {"code": "KeyM", "label": "M"},
+      {"code": "", "label": "LYR"}
     ]
   ],
   "style":  ".keyboard .row { justify-content: flex-start; }"
