@@ -146,6 +146,15 @@ header span {
   justify-content: space-between;
   padding: 0 10px;
 }
+@media screen and (max-width: 750px) {
+  .action {
+    flex-direction: column;
+    align-items: center;
+  }
+  .action > *:not(:first-child) {
+    margin-top: 10px;
+  }
+}
 .action-left, .action-right {
   display: flex;
 }
