@@ -144,7 +144,6 @@ header span {
   width: 100%;
 }
 .keyboard {
-  min-height: 50vh;
   min-width: 500px;
   padding: 0 10px;
 }
