@@ -15,7 +15,7 @@
             </button>
           </div>
           <div>
-            <div class="select">
+            <div class="custom-select">
               <select
                 name="keymapSelector"
                 id="keymapSelector"
@@ -58,6 +58,7 @@ import Key from './components/Key'
 import MapUploader from './components/MapUploader'
 import StyleSheet from './components/StyleSheet'
 import { mapState } from 'vuex'
+import 'fg-select-css/src/select-css.css'
 
 export default {
   name: 'app',
@@ -110,6 +111,23 @@ header span {
   letter-spacing: .02em;
   font-weight: 400;
   box-sizing: border-box;
+}
+.custom-select {
+  background-color: steelblue;
+  border-radius: 5px;
+}
+.custom-select::after {
+	width: 0;
+	height: 0;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-top: 7px solid #fff;
+	margin-top: -3px;
+}
+.custom-select select {
+  border: 0;
+  color: #fff;
+  padding: .6em .6em .7em .6em;
 }
 .action {
   display: flex;
