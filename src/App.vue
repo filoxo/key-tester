@@ -179,7 +179,7 @@ button {
   margin-top: -3px;
   pointer-events: none;
   position: absolute;
-  right: 1em;
+  right: 10px;
   top: 50%;
   width: 0;
   z-index: 2;
