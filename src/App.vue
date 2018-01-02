@@ -59,7 +59,6 @@ import Key from './components/Key'
 import MapUploader from './components/MapUploader'
 import StyleSheet from './components/StyleSheet'
 import { mapState } from 'vuex'
-import 'fg-select-css/src/select-css.css'
 
 export default {
   name: 'app',
@@ -112,33 +111,6 @@ header h1 {
   header { padding: 10px; }
   header h1 { font-size: 18px; }
 }
-.custom-select {
-  background-color: steelblue;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  display: flex;
-  margin-right: 1px;
-}
-.custom-select::after {
-	width: 0;
-	height: 0;
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
-	border-top: 7px solid #fff;
-	margin-top: -3px;
-}
-.custom-select select {
-  border: 0;
-  color: #fff;
-  font-size: 11px;
-  font-weight: bold;
-  padding: 10px;
-  text-transform: uppercase;
-}
-.custom-select select:focus {
-  outline: 1px solid steelblue;
-	outline: -webkit-focus-ring-color auto 5px;
-}
 .action {
   display: flex;
   align-items: stretch;
@@ -177,5 +149,50 @@ button {
   font-weight: bold;
   text-transform: uppercase;
   padding: 10px;
+}
+.custom-select {
+  background-color: #4682b4;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  margin-right: 1px;
+  position: relative;
+}
+.custom-select select {
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 10px;
+  margin: 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+.custom-select::after {
+  content: " ";
+  display: none;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 7px solid #fff;
+  height: 0;
+  margin-top: -3px;
+  pointer-events: none;
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  width: 0;
+  z-index: 2;
+}
+@supports (-webkit-appearance:none) or (appearance:none) or ((-moz-appearance:none) and (mask-type:alpha)) {
+  .custom-select::after {
+    display: block;
+  }
+  .custom-select select {
+    appearance: none;
+    background: 0 0;
+    border: 1px solid transparent;
+    padding-right: 2em;
+  }
 }
 </style>
