@@ -1,23 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import map from './keymaps/apple'
 
 Vue.use(Vuex)
 
-const detectedKeys = {}
-
-map.rows.forEach(row => {
-  row.forEach(keyDef => {
-    detectedKeys[keyDef.code] = false
-  })
-})
-
 const store = new Vuex.Store({
   state: {
-    detectedKeys,
-    map,
+    detectedKeys: {},
+    map: {},
     pressedKeys: {},
-    testText: '',
     styles: ``
   },
   mutations: {

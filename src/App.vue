@@ -69,6 +69,9 @@ export default {
     MapUploader,
     StyleSheet
   },
+  beforeCreate () {
+    this.$store.dispatch('loadMap', 'apple')
+  },
   computed: {
     ...mapState(['detectedKeys', 'map', 'pressedKeys'])
   },
