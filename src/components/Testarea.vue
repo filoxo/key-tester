@@ -5,7 +5,7 @@
     id="testarea"
     cols="45"
     rows="2"
-    placeholder="Begin typing..."
+    placeholder="Begin typing here to detect keys..."
     ref="testarea"
     :value="testText"
     @input="updateTestText"
