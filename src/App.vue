@@ -26,6 +26,7 @@
                 <option value="orthodox">Orthodox</option>
                 <option value="gherkin">Gherkin</option>
                 <option value="lets_split-default">Let's Split (default)</option>
+                <option value="iris">Iris</option>
               </select>
             </div>
             <MapUploader />

@@ -1,0 +1,71 @@
+{
+  "rows": [
+    [
+      {"code": "Escape", "label": "ESC"},
+      {"code": "Key1", "label": "1"},
+      {"code": "Key2", "label": "2"},
+      {"code": "Key3", "label": "3"},
+      {"code": "Key4", "label": "4"},
+      {"code": "Key5", "label": "5"},
+      {"code": "Key6", "label": "6"},
+      {"code": "Key7", "label": "7"},
+      {"code": "Key8", "label": "8"},
+      {"code": "Key9", "label": "9"},
+      {"code": "Key0", "label": "0"},
+      {"code": "Space", "label": "SPC"}
+    ],
+    [
+      {"code": "Tab", "label": "TAB"},
+      {"code": "KeyQ", "label": "Q"},
+      {"code": "KeyW", "label": "W"},
+      {"code": "KeyE", "label": "E"},
+      {"code": "KeyR", "label": "R"},
+      {"code": "KeyT", "label": "T"},
+      {"code": "KeyY", "label": "Y"},
+      {"code": "KeyU", "label": "U"},
+      {"code": "KeyI", "label": "I"},
+      {"code": "KeyO", "label": "O"},
+      {"code": "KeyP", "label": "P"},
+      {"code": "Delete", "label": "DEL"}
+    ],
+    [
+      {"code": "Raise", "label": "RASE"},
+      {"code": "KeyA", "label": "A"},
+      {"code": "KeyS", "label": "S"},
+      {"code": "KeyD", "label": "D"},
+      {"code": "KeyF", "label": "F"},
+      {"code": "KeyG", "label": "G"},
+      {"code": "KeyH", "label": "H"},
+      {"code": "KeyJ", "label": "J"},
+      {"code": "KeyK", "label": "K"},
+      {"code": "KeyL", "label": "L"},
+      {"code": "Semicolon", "label": ";"},
+      {"code": "Quote", "label": "'"}
+    ],
+    [
+      {"code": "ShiftLeft", "label": "LSFT"},
+      {"code": "KeyZ", "label": "Z"},
+      {"code": "KeyX", "label": "X"},
+      {"code": "KeyC", "label": "C"},
+      {"code": "KeyV", "label": "V"},
+      {"code": "KeyB", "label": "B"},
+      {"code": "Space", "label": "SPC"},
+      {"code": "Enter", "label": "ENT"},
+      {"code": "KeyN", "label": "N"},
+      {"code": "KeyM", "label": "M"},
+      {"code": "Comma", "label": ","},
+      {"code": "Period", "label": "."},
+      {"code": "Slash", "label": "/"},
+      {"code": "ShiftRight", "label": "RGHT"}
+    ],
+    [
+      {"code": "ControlLeft", "label": "LCTL"},
+      {"code": "Lower", "label": "LOWR"},
+      {"code": "Space", "label": "SPC"},
+      {"code": "Enter", "label": "ENT"},
+      {"code": "MetaLeft", "label": "LGUI"},
+      {"code": "AltLeft", "label": "LALT"}
+    ]
+  ],
+  "style": ".keyboard { margin-top: .6rem; }\n.row:nth-child(-n+3) .key:nth-child(6) {\n  margin-right: 6rem; \n}\n.row:nth-child(-n+3) .key:nth-child(3),\n.row:nth-child(-n+3) .key:nth-child(10),\n.row:nth-child(4) .key:nth-child(3),\n.row:nth-child(4) .key:nth-child(12),\n.row:nth-child(-n+3) .key:nth-child(6),\n.row:nth-child(-n+3) .key:nth-child(7),\n.row:nth-child(4) .key:nth-child(6),\n.row:nth-child(4) .key:nth-child(9)  {\n  transform: translateY(-.3rem);\n}\n.row:nth-child(-n+3) .key:nth-child(4),\n.row:nth-child(-n+3) .key:nth-child(9),\n.row:nth-child(4) .key:nth-child(4),\n.row:nth-child(4) .key:nth-child(11) {\n  transform: translateY(-.8rem);\n}\n\n.row:nth-child(-n+3) .key:nth-child(5),\n.row:nth-child(-n+3) .key:nth-child(8),\n.row:nth-child(4) .key:nth-child(5),\n.row:nth-child(4) .key:nth-child(10) {\n  transform: translateY(-.6rem);\n}"
+}
