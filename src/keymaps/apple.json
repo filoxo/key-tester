@@ -13,7 +13,8 @@
       {"code": "F9", "label": "F9"},
       {"code": "F10", "label": "F10"},
       {"code": "F11", "label": "F11"},
-      {"code": "F12", "label": "F12"}
+      {"code": "F12", "label": "F12"},
+      {"code": "power", "label": "PWR"}
     ],
     [
       {"code": "Backquote", "label": "`"},
@@ -77,6 +78,7 @@
       {"code": "ShiftRight", "label": "SHIFT", "size": "3"}
     ],
     [
+      {"code": "fn", "label": "fn"},
       {"code": "ControlLeft", "label": "CTRL"},
       {"code": "AltLeft", "label": "ALT"},
       {"code": "MetaLeft", "label": "⌘", "size": "1.5"},
@@ -88,5 +90,6 @@
       {"code": "ArrowDown", "label": "▼", "size": ".5"},
       {"code": "ArrowRight", "label": "▶︎", "size": ".5"}
     ]
-  ]
+  ],
+  "style": ".fn .label, .power .label { background: rgba(0,0,0,.3); }"
 }
