@@ -13,6 +13,8 @@
         'u3':    size === '3',
         'u3-25': size === '3.25',
         'u5':    size === '5',
+        'u6':    size === '6',
+        'u7':    size === '7',
         pressed: isPressed
       }"
     >
