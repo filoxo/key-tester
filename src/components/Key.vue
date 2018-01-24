@@ -1,7 +1,7 @@
 <template>
-  <span :class="{[keyCode]: true}">
+  <span class="key" :class="{[keyCode]: true}">
     <span
-      class="key"
+      class="label"
       :class="{
         active: isActive,
         'u-5':   size === '.5',
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style>
-.key {
+.label {
   border: 2px solid lightgrey;
   border-radius: 5px;
   color: #666;
@@ -42,6 +42,7 @@ export default {
   width: 1.5rem;
 }
 .active { border-color: steelblue; }
+/* base unit of 1.5 rem */
 .u-5 { width: .75rem; }
 .u1-5 { width: 2.25rem; }
 .u1-75 { width: 2.625rem; }
@@ -51,5 +52,7 @@ export default {
 .u3 { width: 4.5rem; }
 .u3-25 { width: 4.875rem; }
 .u5 { width: 7.5rem; }
+.u6 { width: 9rem; }
+.u7 { width: 10.5rem; }
 .pressed { transform: translateY(3px); }
 </style>
