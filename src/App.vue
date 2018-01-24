@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="container" style="overflow-x: auto;">
+      <div class="container" style="overflow-x: auto; text-align: center;">
         <div class="keyboard">
           <div
             class="row"
@@ -94,7 +94,7 @@ body {
 
 main {
   margin: 20px auto;
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
 }
 
@@ -138,6 +138,7 @@ header h1 {
   width: 100%;
 }
 .keyboard {
+  display: inline-block;
   min-width: 500px;
   padding: 0 10px;
 }
