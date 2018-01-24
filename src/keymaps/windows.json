@@ -29,7 +29,7 @@
       {"code": "Digit0", "label": "0"},
       {"code": "Minus", "label": "-"},
       {"code": "Equal", "label": "="},
-      {"code": "Backspace", "label": "DEL", "size": "1.5"}
+      {"code": "Backspace", "label": "Bcksp", "size": "1.5"}
     ],
     [
       {"code": "Tab", "label": "TAB", "size": "1.5"},
@@ -77,11 +77,12 @@
     ],
     [
       {"code": "ControlLeft", "label": "CTRL"},
+      {"code": "MetaLeft", "label": "WIN"},
       {"code": "AltLeft", "label": "ALT"},
-      {"code": "MetaLeft", "label": "WIN", "size": "1.5"},
-      {"code": "Space", "label": "SPACE", "size": "5"},
-      {"code": "MetaRight", "label": "WIN", "size": "1.5"},
+      {"code": "Space", "label": "SPACE", "size": "7"},
       {"code": "AltRight", "label": "ALT"},
+      {"code": "MetaRight", "label": "WIN"},
+      {"code": "ControlRight", "label": "CTRL"},
       {"code": "ArrowLeft", "label": "◀︎", "size": ".5"},
       {"code": "ArrowUp", "label": "▲", "size": ".5"},
       {"code": "ArrowDown", "label": "▼", "size": ".5"},
