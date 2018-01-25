@@ -38,10 +38,11 @@
           <div
             class="row"
             v-for="(row, index) in map.rows"
-            :key="index" >
+            :key="`${mapName}-row-${index}`" >
             <Key
               v-for="key in row"
-              :key="key.code"
+              :key="`${mapName}-${key.code}`"
+              :id="`${mapName}-${key.code}`"
               :keyCode="key.code"
               :label="key.label"
               :size="key.size"
@@ -74,7 +75,7 @@ export default {
     this.$store.dispatch('loadMap', 'apple')
   },
   computed: {
-    ...mapState(['detectedKeys', 'map', 'pressedKeys'])
+    ...mapState(['detectedKeys', 'map', 'mapName', 'pressedKeys'])
   },
   methods: {
     changeMap (e) {
