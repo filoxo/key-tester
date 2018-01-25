@@ -7,6 +7,7 @@ const store = new Vuex.Store({
   state: {
     detectedKeys: {},
     map: {},
+    mapName: '',
     pressedKeys: {},
     styles: ``
   },
@@ -42,12 +43,16 @@ const store = new Vuex.Store({
       }
       state.styles = map.style || ''
     },
+    setMapName (state, mapName) {
+      state.mapName = mapName
+    },
     updateTestText (state, text) {
       state.testText = text
     }
   },
   actions: {
     loadMap ({commit}, mapName) {
+      commit('setMapName', mapName)
       import(`./keymaps/${mapName}.json`)
         .then(map => commit('setMap', map))
     }
