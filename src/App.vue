@@ -87,6 +87,9 @@ export default {
 </script>
 
 <style>
+:root {
+  font-size: 18px;
+}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;
