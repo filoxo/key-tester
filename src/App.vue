@@ -2,6 +2,7 @@
   <div id="app">
     <header>
       <h1>Key Tester</h1>
+      <button type="button">Info</button>
     </header>
     <main>
       <div class="container">
@@ -110,11 +111,18 @@ header {
   color: #fff;
 }
 header h1 {
+  display: inline;
   font-size: 20px;
   line-height: 1;
   letter-spacing: .02em;
   font-weight: 400;
   margin: 0;
+}
+header button {
+  background-color: #fff;
+  color: steelblue;
+  float: right;
+  margin-top: -5px;
 }
 @media screen and (max-width: 750px) {
   header { padding: 10px; }

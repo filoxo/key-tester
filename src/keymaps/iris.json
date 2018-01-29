@@ -2,17 +2,17 @@
   "rows": [
     [
       {"code": "Escape", "label": "ESC"},
-      {"code": "Key1", "label": "1"},
-      {"code": "Key2", "label": "2"},
-      {"code": "Key3", "label": "3"},
-      {"code": "Key4", "label": "4"},
-      {"code": "Key5", "label": "5"},
-      {"code": "Key6", "label": "6"},
-      {"code": "Key7", "label": "7"},
-      {"code": "Key8", "label": "8"},
-      {"code": "Key9", "label": "9"},
-      {"code": "Key0", "label": "0"},
-      {"code": "Space", "label": "SPC"}
+      {"code": "Digit1", "label": "1"},
+      {"code": "Digit2", "label": "2"},
+      {"code": "Digit3", "label": "3"},
+      {"code": "Digit4", "label": "4"},
+      {"code": "Digit5", "label": "5"},
+      {"code": "Digit6", "label": "6"},
+      {"code": "Digit7", "label": "7"},
+      {"code": "Digit8", "label": "8"},
+      {"code": "Digit9", "label": "9"},
+      {"code": "Digit0", "label": "0"},
+      {"code": "Backspace", "label": "BSPC"}
     ],
     [
       {"code": "Tab", "label": "TAB"},
@@ -56,7 +56,7 @@
       {"code": "Comma", "label": ","},
       {"code": "Period", "label": "."},
       {"code": "Slash", "label": "/"},
-      {"code": "ShiftRight", "label": "RGHT"}
+      {"code": "ArrowRight", "label": "→"}
     ],
     [
       {"code": "ControlLeft", "label": "LCTL"},
