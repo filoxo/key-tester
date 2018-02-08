@@ -9,7 +9,8 @@ const store = new Vuex.Store({
     map: {},
     mapName: '',
     pressedKeys: {},
-    styles: ``
+    styles: ``,
+    testText: ''
   },
   mutations: {
     setActive (state, keyCode) {
