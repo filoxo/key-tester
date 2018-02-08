@@ -7,7 +7,7 @@ const store = new Vuex.Store({
   state: {
     detectedKeys: {},
     map: {},
-    mapName: '',
+    mapName: localStorage.getItem('lastKb') || '',
     pressedKeys: {},
     styles: ``,
     testText: ''
@@ -55,7 +55,10 @@ const store = new Vuex.Store({
     loadMap ({commit}, mapName) {
       commit('setMapName', mapName)
       import(`./keymaps/${mapName}.json`)
-        .then(map => commit('setMap', map))
+        .then(map => {
+          localStorage.setItem('lastKb', mapName)
+          return commit('setMap', map)
+        })
     }
   },
   getters: {

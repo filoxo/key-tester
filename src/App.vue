@@ -20,7 +20,8 @@
               <select
                 name="keymapSelector"
                 id="keymapSelector"
-                @change="changeMap" >
+                @change="changeMap"
+                :value="mapName">
                 <option value="apple">Standard (Mac)</option>
                 <option value="windows">Standard (Windows)</option>
                 <option value="orthodox">Orthodox</option>
@@ -72,8 +73,8 @@ export default {
     MapUploader,
     StyleSheet
   },
-  beforeCreate () {
-    this.$store.dispatch('loadMap', 'apple')
+  mounted () {
+    this.$store.dispatch('loadMap', this.mapName || 'apple')
   },
   computed: {
     ...mapState(['detectedKeys', 'map', 'mapName', 'pressedKeys'])
