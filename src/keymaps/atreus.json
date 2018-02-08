@@ -1,0 +1,55 @@
+{
+  "rows": [
+    [
+      {"code": "KeyQ", "label": "Q"},
+      {"code": "KeyW", "label": "W"},
+      {"code": "KeyE", "label": "E"},
+      {"code": "KeyR", "label": "R"},
+      {"code": "KeyT", "label": "T"},
+      {"code": "KeyY", "label": "Y"},
+      {"code": "KeyU", "label": "U"},
+      {"code": "KeyI", "label": "I"},
+      {"code": "KeyO", "label": "O"},
+      {"code": "KeyP", "label": "P"}
+    ],
+    [
+      {"code": "KeyA", "label": "A"},
+      {"code": "KeyS", "label": "S"},
+      {"code": "KeyD", "label": "D"},
+      {"code": "KeyF", "label": "F"},
+      {"code": "KeyG", "label": "G"},
+      {"code": "KeyH", "label": "H"},
+      {"code": "KeyJ", "label": "J"},
+      {"code": "KeyK", "label": "K"},
+      {"code": "KeyL", "label": "L"},
+      {"code": "Semicolon", "label": ";"}
+    ],
+    [
+      {"code": "KeyZ", "label": "Z"},
+      {"code": "KeyX", "label": "X"},
+      {"code": "KeyC", "label": "C"},
+      {"code": "KeyV", "label": "V"},
+      {"code": "KeyB", "label": "B"},
+      {"code": "KeyN", "label": "N"},
+      {"code": "KeyM", "label": "M"},
+      {"code": "Comma", "label": ","},
+      {"code": "Period", "label": "."},
+      {"code": "Slash", "label": "/"}
+    ],
+    [
+      {"code": "Escape", "label": "Esc"},
+      {"code": "Tab", "label": "Tab"},
+      {"code": "MetaLeft", "label": "Cmd"},
+      {"code": "ShiftLeft", "label": "Sft"},
+      {"code": "Backspace", "label": "Bsp"},
+      {"code": "ControlLeft", "label": "Ctl"},
+      {"code": "AltLeft", "label": "Alt"},
+      {"code": "Space", "label": "Spc"},
+      {"code": "Raise", "label": "RS"},
+      {"code": "Minus", "label": "-"},
+      {"code": "Quote", "label": "'"},
+      {"code": "Enter", "label": "Ent"}
+    ]
+  ],
+  "style":  ".key { margin: .1rem; } .row:not(:nth-child(4)) .key:nth-child(5) { margin-right: 6rem; }"
+}
