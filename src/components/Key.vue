@@ -5,6 +5,7 @@
       :class="{
         active: isActive,
         'u-5':   size === '.5',
+        'u1-25':  size === '1.25',
         'u1-5':  size === '1.5',
         'u1-75': size === '1.75',
         'u2':    size === '2',
@@ -46,6 +47,7 @@ export default {
 .active { border-color: steelblue; }
 /* base unit of 1.5 rem */
 .u-5 { width: .75rem; }
+.u1-25 { width: 1.845rem; }
 .u1-5 { width: 2.25rem; }
 .u1-75 { width: 2.625rem; }
 .u2 { width: 3rem; }
