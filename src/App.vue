@@ -29,6 +29,7 @@
                 <option value="lets_split-default">Let's Split (default)</option>
                 <option value="iris">Iris</option>
                 <option value="atreus">Atreus</option>
+                <option value="gnap_ut47">Gnap (UT47)</option>
               </select>
             </div>
             <MapUploader />
