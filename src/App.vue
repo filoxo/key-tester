@@ -170,9 +170,11 @@ button {
   border-bottom-left-radius: 5px;
   display: flex;
   margin-right: 1px;
+  overflow: hidden;
   position: relative;
 }
 .custom-select select {
+  background-color: #4682b4;
   border: 0;
   box-sizing: border-box;
   color: #fff;
@@ -204,7 +206,6 @@ button {
   }
   .custom-select select {
     appearance: none;
-    background: 0 0;
     border: 1px solid transparent;
     padding-right: 2em;
   }
