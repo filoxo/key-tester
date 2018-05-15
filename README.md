@@ -8,12 +8,15 @@ Test which keys on your keyboard are working. Upload your own keymap if you have
 
 ``` bash
 
-# serve with hot reload at localhost:8080
+# Install the project's dependencies
+npm install
+
+# Serve with hot reload at localhost:8080
 npm run dev
 
-# production build
+# Production build
 npm run build
 
-# run all tests
+# Run all tests
 npm test
 ```
