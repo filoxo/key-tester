@@ -22,7 +22,7 @@ export default {
   methods: {
     detectKey (e) {
       console.log(e.code)
-      if (e.code === 'Tab') {
+      if (e.code === 'Tab' || e.code === 'F5') {
         e.preventDefault()
       }
       this.$store.commit('setActive', e.code)
