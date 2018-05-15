@@ -55,6 +55,9 @@
         </div>
       </div>
     </main>
+    <footer>
+      <p>Copyright	&#169; 2017</p>
+    </footer>
     <StyleSheet />
   </div>
 </template>
@@ -120,6 +123,15 @@ header h1 {
   font-weight: 400;
   margin: 0;
 }
+
+footer {
+  color: steelblue;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  }
 @media screen and (max-width: 750px) {
   header { padding: 10px; }
   header h1 { font-size: 18px; }
