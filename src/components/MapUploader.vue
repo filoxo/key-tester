@@ -9,20 +9,20 @@
 
 <script>
 export default {
-  name: 'map-uploader',
+  name: "map-uploader",
   methods: {
-    uploadMapJson (e) {
-      const files = e.target.files || e.dataTransfer.files
-      if (!files.length) return
-      const reader = new FileReader()
-      reader.onload = (r) => {
-        this.$store.commit('setMap', JSON.parse(r.target.result))
-        e.target.value = ''
-      }
-      reader.readAsText(files[0])
+    uploadMapJson(e) {
+      const files = e.target.files || e.dataTransfer.files;
+      if (!files.length) return;
+      const reader = new FileReader();
+      reader.onload = r => {
+        this.$store.commit("setMap", JSON.parse(r.target.result));
+        e.target.value = "";
+      };
+      reader.readAsText(files[0]);
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -38,19 +38,19 @@ export default {
   justify-content: stretch;
   text-transform: uppercase;
 }
-[type=file] {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
+[type="file"] {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
-[type=file] + label {
+[type="file"] + label {
   padding: 10px;
 }
-[type=file]:focus + label {
+[type="file"]:focus + label {
   outline: 1px solid steelblue;
-	outline: -webkit-focus-ring-color auto 5px;
+  outline: -webkit-focus-ring-color auto 5px;
 }
 </style>
