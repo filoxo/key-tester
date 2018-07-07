@@ -21,6 +21,7 @@ export default {
   },
   methods: {
     detectKey(e) {
+      // eslint-disable-next-line no-console
       console.log(e.code);
       if (e.code === "Tab" || e.code === "F5") {
         e.preventDefault();
