@@ -1,71 +1,68 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-const store = new Vuex.Store({
+export default new Vuex.Store({
   state: {
     detectedKeys: {},
     map: {},
-    mapName: localStorage.getItem('lastKb') || '',
+    mapName: localStorage.getItem("lastKb") || "",
     pressedKeys: {},
     styles: ``,
-    testText: ''
+    testText: ""
   },
   mutations: {
-    setActive (state, keyCode) {
-      state.detectedKeys = {...state.detectedKeys, [keyCode]: true}
+    setActive(state, keyCode) {
+      state.detectedKeys = { ...state.detectedKeys, [keyCode]: true };
     },
-    pressKey (state, keyCode) {
-      state.pressedKeys = {...state.pressedKeys, [keyCode]: true}
+    pressKey(state, keyCode) {
+      state.pressedKeys = { ...state.pressedKeys, [keyCode]: true };
     },
-    releaseKey (state, keyCode) {
-      state.pressedKeys = {...state.pressedKeys, [keyCode]: false}
+    releaseKey(state, keyCode) {
+      state.pressedKeys = { ...state.pressedKeys, [keyCode]: false };
     },
-    reset (state) {
+    reset(state) {
       for (let keyCode in state.detectedKeys) {
-        state.detectedKeys[keyCode] = false
+        state.detectedKeys[keyCode] = false;
       }
       for (let keyCode in state.pressedKeys) {
-        state.pressedKeys[keyCode] = false
+        state.pressedKeys[keyCode] = false;
       }
-      state.testText = ''
+      state.testText = "";
     },
-    setMap (state, map) {
-      const hasRows = map.rows && map.rows.length > 0
+    setMap(state, map) {
+      const hasRows = map.rows && map.rows.length > 0;
       if (hasRows) {
-        state.map = map
-        const detectedKeys = {}
+        state.map = map;
+        const detectedKeys = {};
         map.rows.forEach(row => {
           row.forEach(keyDef => {
-            detectedKeys[keyDef.code] = false
-          })
-        })
+            detectedKeys[keyDef.code] = false;
+          });
+        });
       }
-      state.styles = map.style || ''
+      state.styles = map.style || "";
     },
-    setMapName (state, mapName) {
-      state.mapName = mapName
+    setMapName(state, mapName) {
+      state.mapName = mapName;
     },
-    updateTestText (state, text) {
-      state.testText = text
+    updateTestText(state, text) {
+      state.testText = text;
     }
   },
   actions: {
-    loadMap ({commit}, mapName) {
-      commit('setMapName', mapName)
-      import(`./keymaps/${mapName}.json`)
-        .then(map => {
-          localStorage.setItem('lastKb', mapName)
-          return commit('setMap', map)
-        })
+    loadMap({ commit }, mapName) {
+      commit("setMapName", mapName);
+      import(`./keymaps/${mapName}.json`).then(map => {
+        localStorage.setItem("lastKb", mapName);
+        return commit("setMap", map);
+      });
     }
   },
   getters: {
     getDetectedKey: state => code => {
-      return state.detectedKeys[code]
+      return state.detectedKeys[code];
     }
   }
-})
-
-export default store
+});
