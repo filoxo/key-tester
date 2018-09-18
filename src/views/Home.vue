@@ -16,22 +16,6 @@
             </button>
           </div>
           <div class="action-right">
-            <!-- <div class="custom-select">
-              <select
-                name="keymapSelector"
-                id="keymapSelector"
-                @change="changeMap"
-                :value="mapName">
-                <option value="apple">Standard (Mac)</option>
-                <option value="windows">Standard (Windows)</option>
-                <option value="orthodox">Orthodox</option>
-                <option value="gherkin">Gherkin</option>
-                <option value="lets_split-default">Let's Split (default)</option>
-                <option value="iris">Iris</option>
-                <option value="atreus">Atreus</option>
-                <option value="gnap_ut47">Gnap (UT47)</option>
-              </select>
-            </div> -->
             <div class="custom-select">
               <select
                 name="keyboardSelector"
@@ -68,7 +52,7 @@
         <div class="keyboard">
           <div
             class="row"
-            v-for="(row, index) in map.rows"
+            v-for="(row, index) in getSelectedLayout()"
             :key="`${mapName}-row-${index}`" >
             <Key
               v-for="key in row"
@@ -94,7 +78,7 @@ import MapUploader from "../components/MapUploader";
 import StyleSheet from "../components/StyleSheet";
 import { mapState } from "vuex";
 
-const keyboards = ["General"];
+const keyboards = ["General", "Planck"];
 
 export default {
   name: "Home",
@@ -110,18 +94,10 @@ export default {
     };
   },
   mounted() {
-    // this.$store.dispatch("loadMap", this.mapName || "apple");
-    this.$store.dispatch("loadKeyboard", this.selectedKeyboard || keyboards[0]);
+    this.$store.dispatch("loadKeyboard", keyboards[0]);
   },
   computed: {
-    ...mapState([
-      "detectedKeys",
-      "map",
-      "mapName",
-      "pressedKeys",
-      "keyboard",
-      "layout"
-    ])
+    ...mapState(["detectedKeys", "pressedKeys", "keyboard", "layout"])
   },
   methods: {
     changeMap(e) {
@@ -134,6 +110,9 @@ export default {
     },
     changeLayout(e) {
       this.$store.dispatch("selectLayout", e.target.value);
+    },
+    getSelectedLayout() {
+      return this.keyboard.layouts[this.layout].layout;
     }
   }
 };
