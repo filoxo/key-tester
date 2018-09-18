@@ -16,7 +16,7 @@
             </button>
           </div>
           <div class="action-right">
-            <div class="custom-select">
+            <!-- <div class="custom-select">
               <select
                 name="keymapSelector"
                 id="keymapSelector"
@@ -31,8 +31,36 @@
                 <option value="atreus">Atreus</option>
                 <option value="gnap_ut47">Gnap (UT47)</option>
               </select>
+            </div> -->
+            <div class="custom-select">
+              <select
+                name="keyboardSelector"
+                id="keyboardSelector"
+                @change="changeKeyboard"
+                :value="keyboard.keyboard_name">
+                <option
+                  v-for="keyboard in keyboards"
+                  :key="keyboard"
+                  :value="keyboard">
+                    {{keyboard}}
+                </option>
+              </select>
             </div>
-            <MapUploader />
+            <div class="custom-select">
+              <select
+                name="layoutSelector"
+                id="layoutSelector"
+                @change="changeLayout"
+                :value="layout">
+                <option
+                  v-for="layout in Object.keys(keyboard.layouts)"
+                  :key="layout"
+                  :value="layout">
+                    {{layout}}
+                </option>
+              </select>
+            </div>
+            <!-- <MapUploader /> -->
           </div>
         </div>
       </div>
@@ -66,24 +94,46 @@ import MapUploader from "../components/MapUploader";
 import StyleSheet from "../components/StyleSheet";
 import { mapState } from "vuex";
 
+const keyboards = ["General"];
+
 export default {
-  name: "app",
+  name: "Home",
   components: {
     Testarea,
     Key,
     MapUploader,
     StyleSheet
   },
+  data: function() {
+    return {
+      keyboards
+    };
+  },
   mounted() {
-    this.$store.dispatch("loadMap", this.mapName || "apple");
+    // this.$store.dispatch("loadMap", this.mapName || "apple");
+    this.$store.dispatch("loadKeyboard", this.selectedKeyboard || keyboards[0]);
   },
   computed: {
-    ...mapState(["detectedKeys", "map", "mapName", "pressedKeys"])
+    ...mapState([
+      "detectedKeys",
+      "map",
+      "mapName",
+      "pressedKeys",
+      "keyboard",
+      "layout"
+    ])
   },
   methods: {
     changeMap(e) {
       this.$store.commit("reset");
       this.$store.dispatch("loadMap", e.target.value);
+    },
+    changeKeyboard(e) {
+      this.$store.commit("reset");
+      this.$store.dispatch("loadKeyboard", e.target.value);
+    },
+    changeLayout(e) {
+      this.$store.dispatch("selectLayout", e.target.value);
     }
   }
 };

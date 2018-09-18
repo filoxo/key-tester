@@ -7,10 +7,12 @@ export default new Vuex.Store({
   state: {
     detectedKeys: {},
     map: {},
-    mapName: localStorage.getItem("lastKb") || "",
     pressedKeys: {},
     styles: ``,
-    testText: ""
+    testText: "",
+    keyboard: {
+      layouts: []
+    }
   },
   mutations: {
     setActive(state, keyCode) {
@@ -31,38 +33,32 @@ export default new Vuex.Store({
       }
       state.testText = "";
     },
-    setMap(state, map) {
-      const hasRows = map.rows && map.rows.length > 0;
-      if (hasRows) {
-        state.map = map;
-        const detectedKeys = {};
-        map.rows.forEach(row => {
-          row.forEach(keyDef => {
-            detectedKeys[keyDef.code] = false;
-          });
-        });
-      }
-      state.styles = map.style || "";
-    },
-    setMapName(state, mapName) {
-      state.mapName = mapName;
-    },
     updateTestText(state, text) {
       state.testText = text;
+    },
+    setKeyboard(state, keyboard) {
+      state.keyboard = keyboard;
+    },
+    setLayout(state, layout) {
+      state.layout = layout;
+      localStorage.setItem(
+        "kt-kb",
+        `${state.keyboard.keyboard_name}/${layout}`
+      );
     }
   },
   actions: {
-    loadMap({ commit }, mapName) {
-      commit("setMapName", mapName);
-      import(`./keymaps/${mapName}.json`).then(map => {
-        localStorage.setItem("lastKb", mapName);
-        return commit("setMap", map);
+    loadKeyboard({ commit }, keyboard) {
+      import(`./keymaps/${keyboard.toLowerCase()}.json`).then(map => {
+        commit("setKeyboard", map);
+        commit("setLayout", Object.keys(map.layouts)[0]);
       });
+    },
+    selectLayout({ commit }, layout) {
+      commit("setLayout", layout);
     }
   },
   getters: {
-    getDetectedKey: state => code => {
-      return state.detectedKeys[code];
-    }
+    getDetectedKey: state => code => state.detectedKeys[code]
   }
 });
